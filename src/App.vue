@@ -53,7 +53,7 @@ const ready = ref(false)
 onMounted(() => ready.value = true)
 
 const vars = ref<[string, string][]>([])
-const templateText = ref("Hello, Use right panel create a [variable].")
+const templateText = ref("Hello, Use right panel create a [variable] .")
 function getTemplateText() { return templateText }
 
 const cache = localStorage.getItem("template-craft")
