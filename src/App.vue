@@ -31,7 +31,8 @@
     </div>
     <div class="no-vars" v-else>
       <h2>Variables</h2>
-      <p>Create a vars,to show charm</p>
+      <p>Create a vars and show charm</p>
+      <p>Drag variable to editor<wbr> or enter "[VAR_NAME]"</p>
     </div>
     <div class="item line" @click="vars.push(['variable', ''])">Create</div>
     <br>
@@ -52,7 +53,7 @@ const ready = ref(false)
 onMounted(() => ready.value = true)
 
 const vars = ref<[string, string][]>([])
-const templateText = ref("Hello World")
+const templateText = ref("Hello, Use right panel create a [variable].")
 function getTemplateText() { return templateText }
 
 const cache = localStorage.getItem("template-craft")
